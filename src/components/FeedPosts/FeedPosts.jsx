@@ -1,6 +1,8 @@
 import { Box, Container, Flex, Skeleton, SkeletonCircle, VStack } from '@chakra-ui/react'
 //import React from 'react'
 import FeedPost from './FeedPost'
+import { useState } from 'react'
+import { useEffect } from 'react'
 
 const FeedPosts = () => {
   const [isLoading,setIsLoading] = useState(true)
@@ -11,7 +13,7 @@ const FeedPosts = () => {
   },[])
   return (
     <Container maxW={"container.sm"} py={10} px={2}>
-      {isLoading && [0,1,2,3].map((_,idx) =>(
+      {isLoading && [0,1,2,3].map((_,idx) =>( 
         <VStack key={idx} gap={4} alignItems={"flex-start"} mb={10}>
           <Flex gap="2">
             <SkeletonCircle size='10' />
