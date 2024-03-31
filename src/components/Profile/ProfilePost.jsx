@@ -67,7 +67,7 @@ const ProfilePost = ({img}) => {
           border={"1px solid"}
           borderColor={"whiteAlpha.300"}
           flex={1.5}>
-         <Image src={img} alt='profile post' />
+          <Image width={"full"} height={"full"} src={img} alt='profile post' />
           </Box>
           <Flex flex={1} flexDir={"column"} px={10} dispaly={{base:"none",md:"flex"}}> 
           <Flex alignItems={"center"} justifyContent={"space-between"}>
