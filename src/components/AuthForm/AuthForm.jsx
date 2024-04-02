@@ -1,27 +1,18 @@
 import{ Box,Flex, Button, Image, Input, VStack,Text } from '@chakra-ui/react';
 import { useState } from "react";
-import { useNavigate } from "react-router-dom";
+
 
 //import React from 'react'
 
 
 const AuthForm = () => {
   const [isLogin, setIsLogin] = useState(true);
-  const navigate= useNavigate();
   const [inputs, setInputs] = useState({
  email:"",
  password:"",
  confirmPassword:"",
 });
- const handleAuth = () => {
-  if(!inputs.email || !inputs.password //|| inputs.confirmPassword
-  )
-  {
-    alert("Please fill all the details");
-    return
-  }
-   navigate("/");
- };
+ 
 
   return (
   <>
@@ -45,7 +36,7 @@ const AuthForm = () => {
    
    fontSize={14} type='password' /> : null}  
    
-   <Button w={"full"} colorScheme='blue' size={"sm"} fontSize={14} onClick={handleAuth}>
+   <Button w={"full"} colorScheme='blue' size={"sm"} fontSize={14} >
     { isLogin ? "Log in" : "Sign Up"}
    </Button>
 
