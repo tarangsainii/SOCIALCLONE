@@ -1,20 +1,13 @@
-import { Input } from "@chakra-ui/react"
+import { Flex, Image, Text,  } from "@chakra-ui/react"
 
 const GoogleAuth = () => {
-  return < >
-  <Input placeholder='Email' fontSize={14} type='email'
-     value={inputs.email}
-    onChange={(e) => setInputs({...inputs,email:e.target.value})} 
-    />
-
-   <Input placeholder='Password'  fontSize={14} type='password'
-   value={inputs.password}
-   onChange={(e) => setInputs({...inputs,password:e.target.value})} 
-   
-   />
+  return <Flex alignItems={"center"} justifyContent={"center"} cursor={"pointer"}>
+  <Image src='/google.png' w={5} alt='Google logo'/>
+  <Text mx="2" color={"blue.500"}> 
+    Log in with Google
+  </Text>
   
-  
-  </>
+     </Flex>
     
   
 };

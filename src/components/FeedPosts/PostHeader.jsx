@@ -1,55 +1,38 @@
-import { Avatar, AvatarGroup, Button, Flex, Text, VStack } from '@chakra-ui/react'
-//import React from 'react'
+import { Avatar, Box, Flex, Text } from "@chakra-ui/react";
 
-const ProfileHeader = () => {
-  return (
-    <Flex gap={{base:4,sm:10}} py={10} direction={ {base:"column",sm:"row"}}>
-<AvatarGroup 
- size={{base:"x1",md:"2x1"}}
- justifySelf={"center"}
- alignSelf={"flex-start"}
+const PostHeader = ({username,avatar}) => {
+  return <Flex justifyContent={"space-between"} alignItems={"center"} w={"full"} my={2}>
+    <Flex alignItems={"center"} gap={2}>
+     <Avatar src={avatar} alt="user profile pic"  size={"sm"}/>
+    
+  <Flex fontSize={12} fontWeight={"bold"} gap='2'>
+    {username}
+     <Box color={"gray.500"}> .1w</Box>
 
- mx={"auto"}
- my ={-30}
->
-<Avatar  width={200} height={200} name='As a Programmer' src="/profilepic.png" alt="As a programmer logo"/>
-</AvatarGroup>
-<VStack alignItems={"start"} gap={2} mx={"auto"} flex={1}>
-<Flex gap={4} direction={{base:"column", sm:"row"}}
-   justifyContent={{base:"center",sm:"flex-start" }}
-   alignItems={"center"}
-   w={"full"}
-
->
-<Text fontSize={{base:"sm",md:"1g"}} >asaprogrammer_</Text>
-<Flex gap={4} alignItems={"center"} justifyContent={"center"} >
-  <Button bg={"white"} color={"black"}  _hover={{bg:"whiteAlpha.800"}} size={{base:"xs",md:"sm"}}> 
-    Edit Profile
-  </Button>
-
-</Flex>
-</Flex>
-<Flex alignItems={"center"} gap={{base:2,sm:4}}>
-  <Text fontSize={{base:"xs",md:"sm"}}  > 
-    <Text as="span" fontWeight={"bold"} mr={1}>4</Text>
-    Posts 
-  </Text>
-  <Text fontSize={{base:"xs",md:"sm"}}> 
-    <Text as="span" fontWeight={"bold"} mr={1}>149</Text>
-    Followers 
-  </Text>
-  <Text fontSize={{base:"xs",md:"sm"}}> 
-    <Text as="span" fontWeight={"bold"} mr={1}>175</Text>
-    Following 
-  </Text>
-</Flex>
-<Flex alignItems={"center"} gap={4}>
-   <Text  fontSize={"sm"} fontWeight={"bold"}> As a Programmer</Text>
-</Flex>
-<Text  fontSize={"sm"} > Level up your skills</Text>
-</VStack>
+  </Flex>
     </Flex>
-  )
-}
-
-export default ProfileHeader
+  <Box
+ //fontSize={12} 
+  cursor={"pointer"}
+  //color={"blue.500"}
+  //fontWeight={"bold"}
+   //_hover={{
+    //color: "white", 
+  // }}
+   //</Flex>transition={"0.2s ease-in-out"}
+  >
+    <Text
+    fontSize={12}
+    color={"blue.500"}
+  fontWeight={"bold"}
+   _hover={{
+    color: "white", 
+   }}
+   transition={"0.2s ease-in-out"}
+   > Unfollow
+    </Text>
+  </Box>
+    </Flex>;
+  
+};
+export default PostHeader

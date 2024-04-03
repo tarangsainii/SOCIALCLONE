@@ -11,7 +11,7 @@ const ProfileHeader = () => {
 
  mx={"auto"}
 >
-<Avatar name='As a Programmer' src="/profilepic.png" alt="As a programmer logo"/>
+<Avatar width={200} height={200} name='As a Programmer' src="/profilepic.png" alt="As a programmer logo"/>
 </AvatarGroup>
 <VStack alignItems={"start"} gap={2} mx={"auto"} flex={1}>
 <Flex gap={4} direction={{base:"column", sm:"row"}}
