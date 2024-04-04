@@ -10,6 +10,7 @@ const ProfileHeader = () => {
  alignSelf={"flex-start"}
 
  mx={"auto"}
+ my ={-30}
 >
 <Avatar width={200} height={200} name='As a Programmer' src="/profilepic.png" alt="As a programmer logo"/>
 </AvatarGroup>
