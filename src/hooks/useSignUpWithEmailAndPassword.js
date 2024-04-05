@@ -15,7 +15,7 @@ const useSignUpWithEmailAndPassword = () => {
        if(!inputs.email || !inputs.password || !inputs.username || !inputs.fullName){
        // console.log("Please fill all the fields")
        showToast("Error","Please fill all the fields", "error");
-        return 
+        return ;
        }
         try {
             const newUser =  await  createUserWithEmailAndPassword(inputs.email,inputs.password);

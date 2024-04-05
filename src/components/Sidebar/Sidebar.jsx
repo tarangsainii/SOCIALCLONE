@@ -93,10 +93,8 @@ const Sidebar = () => {
             openDelay={500}
             display={{base: "block", md:"none"}}
             >
-          <Link
-           display={"flex"}
-            to={"/auth" }
-            as={RouterLink}
+          <Flex
+          onClick={handleLogout}
            alignItems={"center"}
            gap={4}
            _hover={{ bg:"whiteAlpha.400" }}
@@ -108,11 +106,11 @@ const Sidebar = () => {
            
            >
           <BiLogOut size={25} />
-          <Button display={{base:"none", md:"block"}}>Logout</Button>
-           variant={"ghost"}
+          <Button display={{base:"none", md:"block"}} variant={"ghost"}
            _hover={{bg:"transparent"}}
-           isLoading={isLoggingOut}
-          </Link>
+           isLoading={isLoggingOut}>Logout</Button>
+          
+          </Flex>
             </Tooltip>
     </Flex>
     
