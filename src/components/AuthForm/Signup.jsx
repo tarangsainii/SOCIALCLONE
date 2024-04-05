@@ -15,18 +15,27 @@ const Signup = () => {
 const [showPassword, setShowPassword] = useState(false);
 const {loading,error,signup} =useSignUpWithEmailAndPassword()
   return < >
-  <Input placeholder='Email' fontSize={14} type='email'
+  <Input 
+  placeholder='Email' 
+  fontSize={14} 
+  type='email'
   size={"sm"}
      value={inputs.email}
     onChange={(e) => setInputs({...inputs,email:e.target.value})} 
     />
-     <Input placeholder='Username' fontSize={14} 
+
+     <Input 
+     placeholder='Username' 
+     fontSize={14} 
      type='text'
      size={"sm"}
      value={inputs.username}
     onChange={(e) => setInputs({...inputs,username:e.target.value})} 
     />
-    <Input placeholder='Full Name' fontSize={14} 
+
+    <Input 
+    placeholder='Full Name' 
+    fontSize={14} 
     type='text'
     size={"sm"}
      value={inputs.fullName}
@@ -34,7 +43,9 @@ const {loading,error,signup} =useSignUpWithEmailAndPassword()
     />
   <InputGroup>
 
-   <Input placeholder='Password'  fontSize={14}
+   <Input 
+   placeholder='Password' 
+    fontSize={14}
     type={showPassword ? "text" :"password"} 
    value={inputs.password}
    size={"sm"}
