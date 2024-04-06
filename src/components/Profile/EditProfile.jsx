@@ -22,8 +22,8 @@ import {
 import useShowToast from "../../hooks/useShowToast";
 import { useRef, useState } from "react";
 import useAuthStore from "../../store/authStore";
-import usePreviewImg from "../,,hoosks/usePreviewImg";
 import useEditProfile from "../../hooks/useEditProfile"; 
+import usePreviewImg from '../../hooks/usePreviewImg';
 
 const EditProfile = ({ isOpen, onClose }) => {
 	const [inputs, setInputs] = useState({
